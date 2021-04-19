@@ -1,4 +1,5 @@
 bin/
+classes/
 lib/*.jar
 
 # Created by https://www.toptal.com/developers/gitignore/api/jetbrains

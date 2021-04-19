@@ -6,7 +6,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/OSRS Bot Clients/OSBot 2.6.23.jar">
+	<classpathentry kind="lib" path="$PROJECT_DIR$/lib/OSBot 2.6.23.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="https://osbot.org/api"/>
 			<attribute name="module" value="true"/>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Bot">
+    <output-path>$USER_HOME$/OSBot/Scripts</output-path>
+    <root id="archive" name="woodcutting-bot.jar">
+      <element id="module-output" name="RS" />
+    </root>
+  </artifact>
+</component>
