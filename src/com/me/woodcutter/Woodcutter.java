@@ -1,18 +1,13 @@
 package com.me.woodcutter;
 
-import org.osbot.rs07.api.map.*;
+import org.osbot.rs07.api.Bank;
+import org.osbot.rs07.api.Inventory;
+import org.osbot.rs07.api.Walking;
 import org.osbot.rs07.api.map.Area;
 import org.osbot.rs07.api.model.Entity;
 import org.osbot.rs07.api.model.Player;
 import org.osbot.rs07.script.Script;
-import org.osbot.rs07.script.MethodProvider;
 import org.osbot.rs07.script.ScriptManifest;
-import java.lang.Object;
-import org.osbot.rs07.api.Bank;
-import org.osbot.rs07.api.Client;
-import org.osbot.rs07.api.Inventory;
-import org.osbot.rs07.api.Walking;
-
 
 @ScriptManifest(
 	    author = "Jonas", 
@@ -22,28 +17,31 @@ import org.osbot.rs07.api.Walking;
 	    version = 0.1
 	)
 public class Woodcutter extends Script {
-	/**
-	 * @param string pohui
-	 */
+
 	public void onStart() { 
-		
+		// Script starts.
 	}
-	public void onExit() { }
+
+	public void onExit() {
+	    // Script exits.
+    }
 		
 	@Override
 	public int onLoop() throws InterruptedException {
-        Inventory inven = getInventory();
-        Player player = this.myPlayer();
+        /*
+         * @TODO Use this.[object] instead of get();
+         */
+        Inventory inventory = getInventory();
+        Player player = myPlayer();
         Bank bank = getBank();
         Walking walking = getWalking();
         
-        if (!inven.isFull()) {
+        if (!inventory.isFull()) {
             // chop
-        	
-        	
+
             if(new Area(3081, 3223, 3092, 3239).contains(player)){
-            Entity playerEntity = (Entity)getObjects().getAll()[player.getIndex()]
-            	Entity willow = closest("Willow");
+
+                Entity willow = getPlayers().closest("Willow");
  
             if (willow != null) {
                 if (willow.isVisible()) {
@@ -63,7 +61,7 @@ public class Woodcutter extends Script {
         } else {
             // bank
             if (new Area(3092, 3240, 3097, 3246).contains(player)) {
-                Entity bankbooth = closestObject(23961);
+                Entity bankbooth = getPlayers().closest(23961);
  
                 if (bank.isOpen()) {
                     bank.depositAll();

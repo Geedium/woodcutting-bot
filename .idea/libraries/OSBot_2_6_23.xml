@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="OSBot 2.6.23">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/OSBot 2.6.23.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="https://osbot.org/api" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>
