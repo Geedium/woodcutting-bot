@@ -26,6 +26,7 @@ import java.awt.*;
 public class Woodcutter extends Script {
 
     boolean reachedArea = false;
+    String tree = "None";
 
     final Area WILLOW_AREA = new Area(3081, 3223, 3092, 3239);
 	final Area TREE_AREA = new Area(3138, 3261, 3136, 3200);
@@ -36,6 +37,7 @@ public class Woodcutter extends Script {
 	public void onStart() { 
 		// Script starts.
         logger.info("Woodcutter started!");
+		GUI.run(this);
 	}
 
 	public void onExit() {
